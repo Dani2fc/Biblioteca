@@ -1,19 +1,16 @@
 package ejecutable;
 
-import javax.swing.JOptionPane;
-
+import controlador.controlador;
 import modelo.Libros;
+import vista.VentanaPrincipal;
 
-public class test {
-    public static void main(String[] args) {
-        // Input
-        String nameL = JOptionPane.showInputDialog("Digite el nombre del libro: ");
-        String nameA = JOptionPane.showInputDialog("Digite el nombre del Autor: ");
-        int yearE = Integer.parseInt(JOptionPane.showInputDialog("Digite el año de edición del libro: "));
-        boolean dlxE = Boolean.parseBoolean(JOptionPane.showInputDialog(null, "¿El libro es una edición de lujo?\n Escrbir true para si y false para no "));
+public class test 
+{
+    public static void main (String[] args)
+    {
+       VentanaPrincipal miVentana= new VentanaPrincipal();
+       Libros miModelo = new Libros(null, null, null, 0, null);  
+       controlador miControlador = new controlador(miVentana,miModelo);
 
-        Libros miLibro = new Libros(nameL, nameA, yearE, dlxE);
-        miLibro.edicionDeLujo();
-        JOptionPane.showMessageDialog(null, miLibro.toString(), "Biblioteca señor Pérez", 1);
-    }
+    }   
 }

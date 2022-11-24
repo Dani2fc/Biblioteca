@@ -1,21 +1,25 @@
 package modelo;
 
 public class Coleccion extends Libros {
-    // Atributos
-    private String nombreColeccion = "";
-    private int[] numeroLibroDeColeccion;
+    public String nombreColeccion;
+    public int numColeccion;
 
-    // Constructor
-    public Coleccion(String nameL, String nameA, int yearE, boolean dlxE){
-        super(nameL, nameA, yearE, dlxE);
+    public Coleccion(String nLi, String nAu1,String nAu2, int yEd, String dlxE, String nCol, int sCol)
+    {
+        super(nLi, nAu1,nAu2, yEd, dlxE);
+        this.nombreColeccion= nCol;
+        this.numColeccion= sCol;
     }
-
-    // Métodos
-    public void coleccionLibros(){
-
+    public String getNombreColeccion() {
+        return nombreColeccion;
     }
-
-    public int numeroEnLaColeccion(){
-        
+    public void setNombreColeccion(String nombreColeccion) {
+        this.nombreColeccion = nombreColeccion;
+    }
+    public int getSerieColeccion() {
+        return numColeccion;
+    }
+    public void setSerieColeccion(int numColeccion) {
+        this.numColeccion = numColeccion;
     }
 }
