@@ -32,3 +32,4 @@ Con su respecctivo constructor heredado de la clase "Libros" y sus métodos:
 - numeroEnLaColección.
 
 ![Diagrama de clases](Biblioteca.jpeg "Diagrama de clases del caso biblioteca")
+![Diagrama de clases](Ejemplo.jpeg "Diagrama de clases del caso biblioteca")
